@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo List</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body onunload="saveData()">
+        <div class="bg-container">
+            <div class="total-container">
+                <form class="data-container">
+                    <div class="userinput-container">
+                        <input id="todo" placeholder="Todo" type="text">
+                        <input id="date" type="date">
+                    </div>
+                    <div class="radio-container">
+                        <label for="work" name="radios">Arbeit</label>
+                        <input id="work" type="Radio" value="Arbeit">
+
+                        <label for="school" name="radios">Schule</label>
+                        <input id="school" type="Radio" value="Schule">
+
+                        <label for="private" name="radios">Privat</label>
+                        <input id="private"type="Radio" value="Privat">
+                    </div>
+                </form>
+                <button onclick="handleInput()" type="submit">Hinzufügen</button>
+                <button onclick="saveData()">Save</button>
+            </div>
+
+            <table id="data-table">
+                <colgroup>
+                    <col style="width: 5%;">
+                    <col style="width: 55%;">
+                    <col style="width: 15%;">
+                    <col style="width: 10%;">
+                    <col style="width: 15%;">
+                </colgroup>
+                <tr>
+                    <th>Index</th>
+                    <th>Todo</th>
+                    <th>Bis</th>
+                    <th>Ort</th>
+                    <th>Fertig</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+    <script src="js/index.js"></script>
+</html>
